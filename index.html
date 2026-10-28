@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#275d40"><meta name="description" content="Permainan mengemas rumah untuk Pendidikan Moral Tahun 1. Tiga misi menyeronokkan tentang nilai bertanggungjawab.">
+<title>Minecraft: Selamatkan Rumah Bersepah!</title>
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html" aria-label="Halaman utama"><span class="grass-block" aria-hidden="true"></span><span>DUNIA <b>BLOK</b><small>BELAJAR SAMBIL BERMAIN</small></span></a><div class="header-tools"><span class="subject">TAHUN 1 <i>•</i> PENDIDIKAN MORAL</span><button id="sound" class="icon-btn" aria-pressed="true" aria-label="Matikan bunyi">♫ <span>Bunyi: hidup</span></button></div></header>
+<main>
+<div class="eyebrow">UNIT 3 <span></span> NILAI BERTANGGUNGJAWAB</div>
+<div class="heading-row"><div><h1>Selamatkan rumah <em>bersepah!</em></h1><p class="subtitle">Rumah yang kemas bermula dengan kita.</p></div><div class="score-box"><span aria-hidden="true">★</span><div><small>MARKAH KAMU</small><strong id="score">0 <span>mata</span></strong></div></div></div>
+<div class="layout">
+<aside class="sidebar">
+<section class="mission-card"><div class="card-kicker">PENGEMBARAAN KAMU</div><h2 id="mission-heading">Tiga misi. Satu wira!</h2><ol id="mission-list"><li class="active"><span>01</span><div><b>Bilik Tidur</b><small>Katil &amp; mainan</small></div><i>⌂</i></li><li><span>02</span><div><b>Ruang Belajar</b><small>Buku &amp; alat tulis</small></div><i>✎</i></li><li><span>03</span><div><b>Pintu Masuk</b><small>Kasut &amp; pakaian</small></div><i>⌂</i></li></ol></section>
+<section class="guide-card"><span class="mini-star" aria-hidden="true">✦</span><h3 id="guide-title">Jom jadi wira rumah!</h3><p id="guide-text">Cari barang yang bersepah dan letakkan di tempat yang betul!</p><button id="start" class="primary">MULA BERMAIN <span>➜</span></button><button id="restart" class="text-btn" hidden>↻ Mula semula</button></section>
+<div class="value-note"><span>♥</span><p>Barang kita,<br><b>tanggungjawab kita.</b></p></div>
+</aside>
+<section class="play-card" aria-label="Kawasan permainan">
+<div class="room-toolbar"><div><span class="live-dot"></span><b id="room-title">Misi Nilai Bertanggungjawab</b></div><span id="mission-count">Misi 1 daripada 3</span></div>
+<div id="room" class="room preview"><canvas id="scenery" width="1000" height="570" aria-hidden="true"></canvas><div class="room-tag" id="room-tag">RUMAH KITA</div><div id="targets"></div><div id="items"></div><div id="particles" aria-hidden="true"></div><div class="preview-bubble" id="preview-bubble">Hai! Bantu saya kemas rumah! <span>♥</span></div><div id="clean-banner" hidden>✦ BILIK SUDAH KEMAS! ✦</div></div>
+<div class="play-bottom"><div class="progress-label"><b id="tidy-count">0 / 4 barang dikemas</b><span id="total-count">Jumlah: 0 / 12</span></div><progress id="progress" max="4" value="0" aria-label="Kemajuan misi">0</progress><div id="feedback" class="feedback" role="status" aria-live="polite">✋ Seret barang, atau tekan barang kemudian tempat simpanan.</div><button id="next" class="primary next" hidden>MISI SETERUSNYA ➜</button></div>
+</section>
+</div>
+<section id="result" class="result" hidden tabindex="-1"><div class="trophy" aria-hidden="true">🏆</div><div class="eyebrow">WIRA BERTANGGUNGJAWAB</div><h2>HEBAT! RUMAH SUDAH<br>BERSIH DAN KEMAS!</h2><p>Kamu telah mengemas 12 barang dan melengkapkan 3 misi.</p><strong id="final-score">120 mata</strong><div class="result-actions"><button id="again" class="primary">MAIN LAGI ↻</button><button id="review" class="secondary">ULANG KAJI NILAI ✦</button></div><p class="pledge">“Saya murid bertanggungjawab. Saya mengemas barang selepas menggunakannya!”</p></section>
+<div class="learning-strip"><span>✦</span><div><b>Misi kecil, nilai besar.</b><p>Kemas selepas guna. Jaga barang bersama. Jadikan rumah selesa.</p></div><span class="unit-chip">NILAI: BERTANGGUNGJAWAB</span></div>
+</main>
+<footer><span>Direka untuk wira kecil berumur 7 tahun.</span><span>Grafik blok asli • Tiada akaun diperlukan</span><small>Aktiviti pendidikan diinspirasikan oleh Minecraft. Projek bebas, tidak bersekutu dengan Mojang atau Microsoft.</small></footer>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Mulakan pengembaraan baharu?</h2><p>Markah dan kemajuan akan bermula dari kosong.</p><div class="dialog-actions"><button id="cancel-reset" class="secondary">TERUSKAN MISI</button><button id="confirm-reset" class="primary">MULA SEMULA</button></div></dialog>
+<dialog id="quiz-dialog" aria-labelledby="question"><div class="quiz-top"><span id="quiz-count">SOALAN 1 / 4</span><button id="close-quiz" class="icon-btn" aria-label="Tutup ulang kaji">✕</button></div><h2 id="question"></h2><div id="answers"></div><p id="quiz-feedback" role="status" aria-live="polite"></p><button id="quiz-next" class="primary" hidden>SETERUSNYA ➜</button></dialog>
+</body></html>
